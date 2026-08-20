@@ -55,7 +55,7 @@ Four instructions that go in the same note, because they change how the scene is
 - **Bake the lighting** for anything that does not have to respond to something changing. A baked lightmap plus a small environment map costs almost nothing per frame, and each shadow-casting light adds a whole extra pass over the scene.
 - **Prefer cheap shading.** Materials that fake their shading are dramatically cheaper than physically-based ones lit for real, and at the size most web scenes render, the difference is visible only side by side.
 - **Delete what is not visible.** Hidden objects, off-camera geometry, the interior of a sealed object and the modelling scene the object was built in all ship if nobody removes them.
-- **Turn on geometry and image compression at export**, and quantise position and normal precision. The full trade between geometry compression and decode time belongs to the review skill; the default of doing neither is the one that is definitely wrong.
+- **Turn on geometry and image compression at export**, and quantise position and normal precision. Name the geometry options rather than the category, because they are not interchangeable: `KHR_mesh_quantization` stores positions, normals and texture coordinates at reduced precision and needs no decoder at all, `EXT_meshopt_compression` layers a small and fast decoder on top of that, and `KHR_draco_mesh_compression` usually produces the smallest file of the three and charges you a larger decoder and more decode time for it. Which one suits your particular asset is out of scope here. The extensions are specified in the Khronos glTF extension registry, and the glTF Transform documentation covers applying them and reporting what a file actually contains. The image half of this bullet is step 3's subject. The default of doing none of it is the one that is definitely wrong.
 
 **Derive the texture resolution from the rendered size rather than from habit.** Measure how wide the object actually appears. A canvas 480 CSS pixels wide at a device pixel ratio of 2 is 960 device pixels, so a 1024 texture on the largest object in it is already at parity and a 4096 is four times more than can ever be seen.
 
@@ -78,7 +78,15 @@ That last cell is the arithmetic that decides whether the page survives a phone,
 - 2048 by 2048: about 16.8MB, about 22.4MB with mips.
 - 4096 by 4096: about 67MB, about 89MB with mips.
 
-So four 4096 textures are roughly 356MB of video memory from files that may have downloaded as 12MB. The download looks fine in the network panel and the tab dies on a phone. Compressed texture formats fix this because they stay compressed in memory, and the review skill covers which format and what the transcoder costs.
+So four 4096 textures are roughly 356MB of video memory from files that may have downloaded as 12MB. The download looks fine in the network panel and the tab dies on a phone.
+
+**Compressed texture formats are the fix, and they are the only one.** A PNG or a JPEG is compressed on disk and raw in video memory. A block-compressed texture stays compressed in video memory, because the graphics hardware samples the compressed blocks directly.
+
+**What to ship: KTX2 files carrying Basis Universal supercompression**, referenced from the scene through the `KHR_texture_basisu` glTF extension. Basis has two modes and the choice is not cosmetic. ETC1S is the small one and belongs on colour and albedo maps. UASTC is the large one and belongs on normal maps and anywhere a compression artefact reads as an error rather than as softness.
+
+**What it costs.** A transcoder, which is a WebAssembly module fetched alongside the loader and is the decoder row in the table above rather than a rounding error. Decode time at load, once per texture, because a KTX2 file is transcoded on arrival into whichever compressed format the device supports: a BC format on desktop, ASTC on most current mobile hardware, ETC2 on older Android. And the part that looks like a regression: **a KTX2 texture is frequently larger on disk than the JPEG it replaces.** You are trading download bytes you can see for video memory you cannot, at roughly a quarter to an eighth of the uncompressed figure depending on the block size, so a 2048 by 2048 map lands nearer 4MB than 16.8MB before mips. That trade is the whole point, and the network panel is the wrong place to judge it.
+
+**The one case to check rather than assume.** If a device supports none of the target formats, the only remaining output is uncompressed RGBA, and the memory figure returns to the arithmetic above. Verify that on the oldest phone in your traffic, not on your laptop.
 
 **The totals to hold yourself to.** A typical well-made scene adds 1 to 5MB to the page. An unoptimised export adds 20MB or more. If your table totals over 5MB of download, or over about 100MB of texture memory, go back to step 2 rather than forward to step 4.
 
@@ -120,7 +128,15 @@ Show the poster image immediately, in the reserved box, and cross-fade to the ca
 
 **Then add the timeout.** If the load callback has not fired within a fixed budget, five seconds is a reasonable default, stop waiting, keep the poster, and log it. Every failure in the next section other than the zero-height parent ends with a load callback that never fires, and without a timeout the user sits in front of a poster forever with nothing on screen and nothing in the console. A scene that quietly degrades to its own poster is a good day. A scene that hangs is a support ticket.
 
-The same box also carries a real text alternative and a link or control that reaches the same information without the scene. The review skill covers what an adequate alternative contains.
+The same box also carries a real text alternative and a link or control that reaches the same information without the scene. What makes one adequate depends on which kind of scene it is, and the two kinds have different obligations.
+
+**A decorative scene owes nothing but an exit.** If it carries no information the surrounding page does not already carry, the correct alternative is no alternative: hide the container from assistive technology so it is skipped entirely, and do not describe the shape. A paragraph narrating a rotating abstract object is noise inserted into a page somebody is trying to read, and WCAG 1.1.1 says as much for anything that is pure decoration.
+
+**An informative scene owes the information, not a description of the widget.** The test is not whether you described what is on screen, it is whether a person who never sees the canvas ends up knowing the same thing. "An interactive 3D model of the product" describes the control and conveys nothing. What a viewer would learn by rotating it does: the proportions, the ports on the back, the fact that the hinge folds flat. Write that as text, in the page, near the scene rather than hidden behind it.
+
+**A configurator owes its state and its options too.** The current selection has to be readable as text rather than existing only as a colour on a mesh, and every option the scene offers has to be reachable by a control outside the scene. Where that is missing it is not only an accessibility defect, it is a feature with exactly one route into it.
+
+Whether what you wrote actually passes is a separate procedure, and the [WCAG 2.2 audit](/skills/wcag-audit/) is where that lives.
 
 ## Step 8. Ship a mobile path
 
@@ -194,7 +210,7 @@ A marketing site for a project management tool. The hand-off shows an abstract t
 
 - It does not author or optimise the scene. It writes the budget and builds the integration, and the modelling, merging and texture conversion belong to a 3D asset pipeline.
 - It cannot measure. Every figure here is arithmetic over an asset list, and the verification gate at the end is a thing you run, not a thing this produces.
-- It does not judge an integration that already exists, and it deliberately leaves draw call arithmetic, compressed texture formats, geometry compression trades and long-running failures to the review skill rather than repeating them.
+- It does not judge an integration that already exists. Draw call arithmetic is out of scope, and so is choosing between the geometry compression extensions for one specific asset: the first is a profiler question and the second is settled by running a glTF pipeline over the file and comparing the outputs. Failures that only surface after a long run, thermal throttling and memory that grows over an hour, are out of scope as well, because they need a device and a stopwatch rather than a procedure.
 - It is not an accessibility audit. It requires a text alternative and a non-3D route to the same information, and it does not test whether either is any good.
 - It has no view on whether the scene looks right. Art direction, materials and lighting quality are outside it, and a scene can meet every number here and still look cheap.
 - It cannot tell you whether the interactive version sells more than the static one. That is a test with real traffic, and it is frequently the only question that matters.

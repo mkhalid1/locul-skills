@@ -1,6 +1,6 @@
 # Locul skills
 
-104 skills for Claude Code, grouped by the task you are doing.
+96 skills for Claude Code, grouped by the task you are doing.
 
 ## Install
 
@@ -26,15 +26,15 @@ The method, including the bug that invalidated our first round of results, is at
 |---|---|---|
 | `locul-build-mcp-servers` | 6 | [build-mcp-servers](https://locul.ai/skills/build-mcp-servers/) |
 | `locul-code-review` | 6 | [code-review](https://locul.ai/skills/code-review/) |
-| `locul-copywriting` | 6 | [copywriting](https://locul.ai/skills/copywriting/) |
-| `locul-frontend-design` | 11 | [frontend-design](https://locul.ai/skills/frontend-design/) |
+| `locul-copywriting` | 7 | [copywriting](https://locul.ai/skills/copywriting/) |
+| `locul-frontend-design` | 9 | [frontend-design](https://locul.ai/skills/frontend-design/) |
 | `locul-humanize` | 7 | [humanize](https://locul.ai/skills/humanize/) |
-| `locul-marketing` | 17 | [marketing](https://locul.ai/skills/marketing/) |
+| `locul-marketing` | 20 | [marketing](https://locul.ai/skills/marketing/) |
 | `locul-presentations` | 9 | [presentations](https://locul.ai/skills/presentations/) |
-| `locul-product-management` | 8 | [product-management](https://locul.ai/skills/product-management/) |
-| `locul-research` | 8 | [research](https://locul.ai/skills/research/) |
-| `locul-seo` | 16 | [seo](https://locul.ai/skills/seo/) |
-| `locul-writing` | 10 | [writing](https://locul.ai/skills/writing/) |
+| `locul-product-management` | 6 | [product-management](https://locul.ai/skills/product-management/) |
+| `locul-research` | 7 | [research](https://locul.ai/skills/research/) |
+| `locul-seo` | 11 | [seo](https://locul.ai/skills/seo/) |
+| `locul-writing` | 8 | [writing](https://locul.ai/skills/writing/) |
 
 ## Licence
 

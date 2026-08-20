@@ -87,7 +87,7 @@ A register for an invented self-hosted document signing service, showing the sha
 | Invented incumbent pricing of any kind | You cannot substantiate a competitor's price from memory | Cite the competitor's own published page with the date captured, or drop the comparison. |
 | "money back, no questions asked" | The documented remedy is conditional | The exact documented remedy, its conditions, and who decides. |
 | "14-day free trial" (retired) | Retired when the model changed | "30 days to ask for a refund, on the terms set out on the pricing page." |
-| The previous tagline, banned from reuse verbatim | It names a capability that was removed in 2026 | Use the current positioning line from the answer engine positioning brief. |
+| The previous tagline, banned from reuse verbatim | It names a capability that was removed in 2026 | Use the current approved positioning line, from whichever document owns it. |
 
 Two more rules that catch true-but-overbroad claims:
 

@@ -86,7 +86,7 @@ Then accept **two** shapes of article path, not one:
 
 The bare-slug branch is the one that gets left out, and leaving it out is not a partial failure. On a site that serves articles at the root, requiring a `/blog/` prefix drops one hundred per cent of internal links. Every file then carries an empty `internal_links` list, the link audit downstream reports a corpus of orphans, somebody spends a week adding links that already existed, and nothing in the run ever errored.
 
-Guard the bare branch: exclude known non-article single segments such as `pricing`, `about`, `contact`, `login` and anything in the link target registry, or you will record navigation links as article links and inflate every count.
+Guard the bare branch: exclude known non-article single segments such as `pricing`, `about`, `contact`, `login` and any other standing page your site serves at the root, or you will record navigation links as article links and inflate every count.
 
 ## Step 6: three modes, and what each is for
 

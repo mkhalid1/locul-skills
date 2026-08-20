@@ -1,6 +1,6 @@
 {
   "name": "locul-product-management",
-  "description": "Six skills that produce the specification, the tickets, the blueprint and the decision. Each carries an ordering, a gate or a template where getting the sequence wrong is the expensive part. 8 skills. None measured yet, and each skill says so.",
+  "description": "Six skills that produce the specification, the tickets, the blueprint and the decision. Each carries an ordering, a gate or a template where getting the sequence wrong is the expensive part. 6 skills. None measured yet, and each skill says so.",
   "version": "1.0.0",
   "author": {
     "name": "Locul",
@@ -16,10 +16,10 @@
     "expert",
     "council",
     "debate",
-    "idea",
-    "scaffolded",
-    "product",
     "persona",
-    "build"
+    "build",
+    "recurring",
+    "runbook",
+    "spec"
   ]
 }
