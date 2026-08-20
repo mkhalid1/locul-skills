@@ -1,0 +1,25 @@
+{
+  "name": "locul-research",
+  "description": "Where a number came from, whether the source is what it appears to be, and the named biases that make a confident analysis wrong. 8 skills. None measured yet, and each skill says so.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Locul",
+    "url": "https://locul.ai"
+  },
+  "homepage": "https://locul.ai/skills/research/",
+  "license": "MIT",
+  "keywords": [
+    "research",
+    "analysis",
+    "sanity",
+    "check",
+    "claim",
+    "provenance",
+    "trace",
+    "competitive",
+    "teardown",
+    "evidence",
+    "synthesis",
+    "build"
+  ]
+}

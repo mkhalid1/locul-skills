@@ -1,0 +1,41 @@
+# Locul skills
+
+104 skills for Claude Code, grouped by the task you are doing.
+
+## Install
+
+    /plugin marketplace add locul-ai/skills
+
+Then `/plugin` to browse and install any bundle below. No account, and nothing to sign up for.
+
+## What the labels mean
+
+5 of these were run against a control: the same task five times with the skill
+and five times without, on real material, graded blind by someone who had never seen the
+skill. Those carry their numbers on the site.
+
+The rest say plainly that they have not been measured. That is different from failing.
+Skills that went through the test and lost are not published here at all.
+
+The method, including the bug that invalidated our first round of results, is at
+<https://locul.ai/skills/how-we-test/>.
+
+## Bundles
+
+| Plugin | Skills | Task |
+|---|---|---|
+| `locul-build-mcp-servers` | 6 | [build-mcp-servers](https://locul.ai/skills/build-mcp-servers/) |
+| `locul-code-review` | 6 | [code-review](https://locul.ai/skills/code-review/) |
+| `locul-copywriting` | 6 | [copywriting](https://locul.ai/skills/copywriting/) |
+| `locul-frontend-design` | 11 | [frontend-design](https://locul.ai/skills/frontend-design/) |
+| `locul-humanize` | 7 | [humanize](https://locul.ai/skills/humanize/) |
+| `locul-marketing` | 17 | [marketing](https://locul.ai/skills/marketing/) |
+| `locul-presentations` | 9 | [presentations](https://locul.ai/skills/presentations/) |
+| `locul-product-management` | 8 | [product-management](https://locul.ai/skills/product-management/) |
+| `locul-research` | 8 | [research](https://locul.ai/skills/research/) |
+| `locul-seo` | 16 | [seo](https://locul.ai/skills/seo/) |
+| `locul-writing` | 10 | [writing](https://locul.ai/skills/writing/) |
+
+## Licence
+
+MIT. Take them, change them, ship them.

@@ -1,0 +1,25 @@
+{
+  "name": "locul-copywriting",
+  "description": "Six skills that produce copy rather than grading it. Each one carries a slot order, a device bank or a set of placement rules, because the model already writes a decent sentence and the ordering is where the work actually is. 6 skills. None measured yet, and each skill says so.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Locul",
+    "url": "https://locul.ai"
+  },
+  "homepage": "https://locul.ai/skills/copywriting/",
+  "license": "MIT",
+  "keywords": [
+    "copywriting",
+    "audience",
+    "theme",
+    "pack",
+    "broadcast",
+    "calendar",
+    "build",
+    "cold",
+    "outreach",
+    "sequence",
+    "offer",
+    "page"
+  ]
+}

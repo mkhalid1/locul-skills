@@ -1,0 +1,25 @@
+{
+  "name": "locul-writing",
+  "description": "Editing as an ordered set of passes, documentation as a typed artefact, and the two headline tests that replace taste with something falsifiable. 10 skills. None measured yet, and each skill says so.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Locul",
+    "url": "https://locul.ai"
+  },
+  "homepage": "https://locul.ai/skills/writing/",
+  "license": "MIT",
+  "keywords": [
+    "writing",
+    "article",
+    "body",
+    "spec",
+    "visual",
+    "documentation",
+    "architecture",
+    "draft",
+    "hold",
+    "reangle",
+    "error",
+    "message"
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "name": "locul-presentations",
+  "description": "The deck already exists. These are for deciding whether it says one thing per slide, whether the chart is honest, and whether it survives being read rather than presented. 9 skills. None measured yet, and each skill says so.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Locul",
+    "url": "https://locul.ai"
+  },
+  "homepage": "https://locul.ai/skills/presentations/",
+  "license": "MIT",
+  "keywords": [
+    "presentations",
+    "chart",
+    "honesty",
+    "data",
+    "story",
+    "build",
+    "decision",
+    "memo",
+    "deck",
+    "accessibility",
+    "generation",
+    "constraints"
+  ]
+}

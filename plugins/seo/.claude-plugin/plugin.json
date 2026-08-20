@@ -1,0 +1,25 @@
+{
+  "name": "locul-seo",
+  "description": "Search work with a checkable core: what a results page is actually made of, which of your own pages are competing with each other, and why the traffic went away. 16 skills. 1 of 16 measured against a control.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Locul",
+    "url": "https://locul.ai"
+  },
+  "homepage": "https://locul.ai/skills/seo/",
+  "license": "MIT",
+  "keywords": [
+    "seo",
+    "search",
+    "visibility",
+    "answer",
+    "engine",
+    "positioning",
+    "brief",
+    "cluster",
+    "topology",
+    "blueprint",
+    "content",
+    "cannibalisation"
+  ]
+}
