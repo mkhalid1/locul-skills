@@ -1,0 +1,25 @@
+{
+  "name": "locul-data-analysis",
+  "description": "Six skills for the unglamorous half: the cleaning order, the metric definition two teams can agree on, the query that counts correctly, the retention spec, the checks, and the experiment readout. 6 skills. None measured yet, and each skill says so.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Locul",
+    "url": "https://locul.ai"
+  },
+  "homepage": "https://locul.ai/skills/data-analysis/",
+  "license": "MIT",
+  "keywords": [
+    "data analysis",
+    "analytical",
+    "query",
+    "build",
+    "cohort",
+    "retention",
+    "spec",
+    "data",
+    "quality",
+    "check",
+    "suite",
+    "dataset"
+  ]
+}

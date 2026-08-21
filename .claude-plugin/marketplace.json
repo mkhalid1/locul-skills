@@ -5,7 +5,7 @@
     "url": "https://locul.ai"
   },
   "metadata": {
-    "description": "96 skills for Claude Code, grouped by task. 5 were run against a control and carry the numbers; the rest say plainly that they were not. Skills that failed the test are not here.",
+    "description": "114 skills for Claude Code, grouped by task. 5 were run against a control and carry the numbers; the rest say plainly that they were not. Skills that failed the test are not here.",
     "version": "1.0.0"
   },
   "plugins": [
@@ -87,6 +87,33 @@
         "pain",
         "first",
         "social"
+      ]
+    },
+    {
+      "name": "locul-data-analysis",
+      "source": "./plugins/data-analysis",
+      "description": "Six skills for the unglamorous half: the cleaning order, the metric definition two teams can agree on, the query that counts correctly, the retention spec, the checks, and the experiment readout. 6 skills. None measured yet, and each skill says so.",
+      "version": "1.0.0",
+      "author": {
+        "name": "Locul",
+        "url": "https://locul.ai"
+      },
+      "homepage": "https://locul.ai/skills/data-analysis/",
+      "license": "MIT",
+      "category": "data-analysis",
+      "keywords": [
+        "data analysis",
+        "analytical",
+        "query",
+        "build",
+        "cohort",
+        "retention",
+        "spec",
+        "data",
+        "quality",
+        "check",
+        "suite",
+        "dataset"
       ]
     },
     {
@@ -249,6 +276,60 @@
         "evidence",
         "synthesis",
         "build"
+      ]
+    },
+    {
+      "name": "locul-resume",
+      "source": "./plugins/resume",
+      "description": "Six skills for the documents and conversations that decide a hiring outcome, plus one we wrote for this page, measured, and deleted. 6 skills. None measured yet, and each skill says so.",
+      "version": "1.0.0",
+      "author": {
+        "name": "Locul",
+        "url": "https://locul.ai"
+      },
+      "homepage": "https://locul.ai/skills/resume/",
+      "license": "MIT",
+      "category": "resume",
+      "keywords": [
+        "resume",
+        "cover",
+        "letter",
+        "build",
+        "interview",
+        "story",
+        "bank",
+        "offer",
+        "negotiation",
+        "brief",
+        "promotion",
+        "case"
+      ]
+    },
+    {
+      "name": "locul-security",
+      "source": "./plugins/security",
+      "description": "Six skills for the design and decision work: what can go wrong and where, which of nine hundred findings matter, what to do in the first hour of a leak, and how to defend an agent that reads untrusted text. 6 skills. None measured yet, and each skill says so.",
+      "version": "1.0.0",
+      "author": {
+        "name": "Locul",
+        "url": "https://locul.ai"
+      },
+      "homepage": "https://locul.ai/skills/security/",
+      "license": "MIT",
+      "category": "security",
+      "keywords": [
+        "security",
+        "authorisation",
+        "model",
+        "build",
+        "dependency",
+        "risk",
+        "triage",
+        "prompt",
+        "injection",
+        "defence",
+        "secret",
+        "exposure"
       ]
     },
     {
