@@ -1,0 +1,25 @@
+{
+  "name": "locul-paid-ads",
+  "description": "Campaign work where the hard part is not the copy. It is the floors that decide whether a result means anything, the published caps and match rules nothing in the interface enforces for you, and the difference between a documented number and a repeated one. 6 skills. None measured yet, and each skill says so.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Locul",
+    "url": "https://locul.ai"
+  },
+  "homepage": "https://locul.ai/skills/paid-ads/",
+  "license": "MIT",
+  "keywords": [
+    "paid ads",
+    "landing",
+    "page",
+    "message",
+    "match",
+    "rewriter",
+    "facebook",
+    "writer",
+    "google",
+    "negative",
+    "keyword",
+    "list"
+  ]
+}

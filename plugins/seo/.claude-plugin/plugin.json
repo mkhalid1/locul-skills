@@ -1,6 +1,6 @@
 {
   "name": "locul-seo",
-  "description": "Search work with a checkable core: what a results page is actually made of, which of your own pages are competing with each other, and why the traffic went away. 11 skills. 1 of 11 measured against a control.",
+  "description": "Search work built from primary sources: what the engines actually document, what they explicitly tell you to ignore, and the numbers everyone publishes that have no source at all. 5 skills. None measured yet, and each skill says so.",
   "version": "1.0.0",
   "author": {
     "name": "Locul",
@@ -10,16 +10,16 @@
   "license": "MIT",
   "keywords": [
     "seo",
-    "search",
-    "visibility",
-    "content",
-    "cannibalisation",
-    "crawl",
-    "control",
-    "free",
-    "tool",
-    "play",
     "internal",
-    "link"
+    "link",
+    "builder",
+    "keyword",
+    "cluster",
+    "serp",
+    "first",
+    "article",
+    "writer",
+    "title",
+    "meta"
   ]
 }

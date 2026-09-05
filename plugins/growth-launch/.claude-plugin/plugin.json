@@ -1,0 +1,23 @@
+{
+  "name": "locul-growth-launch",
+  "description": "Deciding what to promote through which channel, in what order, and how to tell afterwards which channel actually deserves next quarter's budget. 2 skills. None measured yet, and each skill says so.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Locul",
+    "url": "https://locul.ai"
+  },
+  "homepage": "https://locul.ai/skills/growth-launch/",
+  "license": "MIT",
+  "keywords": [
+    "growth launch",
+    "email",
+    "list",
+    "giveaway",
+    "campaign",
+    "builder",
+    "saas",
+    "launch",
+    "promotion",
+    "plan"
+  ]
+}

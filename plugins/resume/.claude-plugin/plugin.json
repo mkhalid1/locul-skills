@@ -1,6 +1,6 @@
 {
   "name": "locul-resume",
-  "description": "Six skills for the documents and conversations that decide a hiring outcome, plus one we wrote for this page, measured, and deleted. 6 skills. None measured yet, and each skill says so.",
+  "description": "Applications, interviews and offers, built on what applicant tracking vendors and employment regulators actually publish, which contradicts most of the advice in circulation. 5 skills. None measured yet, and each skill says so.",
   "version": "1.0.0",
   "author": {
     "name": "Locul",
@@ -10,16 +10,16 @@
   "license": "MIT",
   "keywords": [
     "resume",
+    "tailorer",
+    "recruiter",
+    "outreach",
+    "writer",
+    "role",
+    "matched",
     "cover",
     "letter",
-    "build",
-    "interview",
-    "story",
-    "bank",
-    "offer",
+    "salary",
     "negotiation",
-    "brief",
-    "promotion",
-    "case"
+    "script"
   ]
 }

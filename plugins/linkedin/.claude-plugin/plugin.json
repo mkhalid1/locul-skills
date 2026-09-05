@@ -1,0 +1,24 @@
+{
+  "name": "locul-linkedin",
+  "description": "Posts, profiles, comments, carousels and outreach, written against character limits and truncation points rather than against advice. 5 skills. None measured yet, and each skill says so.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Locul",
+    "url": "https://locul.ai"
+  },
+  "homepage": "https://locul.ai/skills/linkedin/",
+  "license": "MIT",
+  "keywords": [
+    "linkedin",
+    "carousel",
+    "builder",
+    "comment",
+    "writer",
+    "sequence",
+    "founder",
+    "profile",
+    "rewriter",
+    "post",
+    "generator"
+  ]
+}

@@ -5,283 +5,92 @@
     "url": "https://locul.ai"
   },
   "metadata": {
-    "description": "114 skills for Claude Code, grouped by task. 5 were run against a control and carry the numbers; the rest say plainly that they were not. Skills that failed the test are not here.",
+    "description": "23 skills for Claude Code, grouped by task. 0 were run against a control and carry the numbers; the rest say plainly that they were not. Skills that failed the test are not here.",
     "version": "1.0.0"
   },
   "plugins": [
     {
-      "name": "locul-build-mcp-servers",
-      "source": "./plugins/build-mcp-servers",
-      "description": "Six skills for the build side: the server itself, the transport and hosting, the authorisation flow, the tool schema, the test harness, and the submission package. 6 skills. None measured yet, and each skill says so.",
+      "name": "locul-growth-launch",
+      "source": "./plugins/growth-launch",
+      "description": "Deciding what to promote through which channel, in what order, and how to tell afterwards which channel actually deserves next quarter's budget. 2 skills. None measured yet, and each skill says so.",
       "version": "1.0.0",
       "author": {
         "name": "Locul",
         "url": "https://locul.ai"
       },
-      "homepage": "https://locul.ai/skills/build-mcp-servers/",
+      "homepage": "https://locul.ai/skills/growth-launch/",
       "license": "MIT",
-      "category": "build-mcp-servers",
+      "category": "growth-launch",
       "keywords": [
-        "build mcp servers",
-        "connector",
-        "directory",
-        "submit",
-        "build",
-        "oauth",
-        "setup",
-        "server",
-        "test",
-        "tool",
-        "schema",
-        "remote"
-      ]
-    },
-    {
-      "name": "locul-code-review",
-      "source": "./plugins/code-review",
-      "description": "Review work where the knowledge is the hard part: which lock a migration takes, which shapes a race can have, what actually breaks a consumer of your API, and where the rest of the family of this bug lives. 6 skills. 1 of 6 measured against a control.",
-      "version": "1.0.0",
-      "author": {
-        "name": "Locul",
-        "url": "https://locul.ai"
-      },
-      "homepage": "https://locul.ai/skills/code-review/",
-      "license": "MIT",
-      "category": "code-review",
-      "keywords": [
-        "code review",
-        "breaking",
-        "change",
-        "blast",
-        "radius",
-        "concurrency",
-        "dependency",
-        "upgrade",
-        "migration",
-        "test",
-        "suite"
-      ]
-    },
-    {
-      "name": "locul-copywriting",
-      "source": "./plugins/copywriting",
-      "description": "Six skills that produce copy rather than grading it. Each one carries a slot order, a device bank or a set of placement rules, because the model already writes a decent sentence and the ordering is where the work actually is. 7 skills. None measured yet, and each skill says so.",
-      "version": "1.0.0",
-      "author": {
-        "name": "Locul",
-        "url": "https://locul.ai"
-      },
-      "homepage": "https://locul.ai/skills/copywriting/",
-      "license": "MIT",
-      "category": "copywriting",
-      "keywords": [
-        "copywriting",
-        "audience",
-        "theme",
-        "pack",
-        "broadcast",
-        "calendar",
-        "build",
-        "offer",
-        "page",
-        "pain",
-        "first",
-        "social"
-      ]
-    },
-    {
-      "name": "locul-data-analysis",
-      "source": "./plugins/data-analysis",
-      "description": "Six skills for the unglamorous half: the cleaning order, the metric definition two teams can agree on, the query that counts correctly, the retention spec, the checks, and the experiment readout. 6 skills. None measured yet, and each skill says so.",
-      "version": "1.0.0",
-      "author": {
-        "name": "Locul",
-        "url": "https://locul.ai"
-      },
-      "homepage": "https://locul.ai/skills/data-analysis/",
-      "license": "MIT",
-      "category": "data-analysis",
-      "keywords": [
-        "data analysis",
-        "analytical",
-        "query",
-        "build",
-        "cohort",
-        "retention",
-        "spec",
-        "data",
-        "quality",
-        "check",
-        "suite",
-        "dataset"
-      ]
-    },
-    {
-      "name": "locul-frontend-design",
-      "source": "./plugins/frontend-design",
-      "description": "The review side of front end work: the states nobody built, the attributes that decide whether a form autofills, the contrast maths, and where focus goes when the focused element is deleted. 9 skills. 2 of 9 measured against a control.",
-      "version": "1.0.0",
-      "author": {
-        "name": "Locul",
-        "url": "https://locul.ai"
-      },
-      "homepage": "https://locul.ai/skills/frontend-design/",
-      "license": "MIT",
-      "category": "frontend-design",
-      "keywords": [
-        "frontend design",
-        "accessible",
-        "name",
-        "data",
-        "table",
-        "design",
-        "token",
-        "focus",
-        "keyboard",
-        "form",
-        "interface",
-        "state"
-      ]
-    },
-    {
-      "name": "locul-humanize",
-      "source": "./plugins/humanize",
-      "description": "Six separate passes, because the tells that give generated prose away live at six different levels and a single rewrite instruction reaches none of them reliably. 7 skills. None measured yet, and each skill says so.",
-      "version": "1.0.0",
-      "author": {
-        "name": "Locul",
-        "url": "https://locul.ai"
-      },
-      "homepage": "https://locul.ai/skills/humanize/",
-      "license": "MIT",
-      "category": "humanize",
-      "keywords": [
-        "humanize",
-        "disclosure",
-        "tell",
-        "removal",
-        "claim",
-        "hedge",
-        "house",
-        "style",
-        "guide",
-        "build",
-        "sentence",
-        "rhythm"
-      ]
-    },
-    {
-      "name": "locul-marketing",
-      "source": "./plugins/marketing",
-      "description": "The parts of marketing that have a factual core a model gets wrong: authentication records, platform limits, named legal obligations, and the order operations have to happen in. 20 skills. 1 of 20 measured against a control.",
-      "version": "1.0.0",
-      "author": {
-        "name": "Locul",
-        "url": "https://locul.ai"
-      },
-      "homepage": "https://locul.ai/skills/marketing/",
-      "license": "MIT",
-      "category": "marketing",
-      "keywords": [
-        "marketing",
-        "affiliate",
-        "program",
-        "launch",
-        "capture",
-        "surface",
-        "comment",
-        "growth",
-        "system",
-        "dormant",
+        "growth launch",
+        "email",
         "list",
-        "revival"
+        "giveaway",
+        "campaign",
+        "builder",
+        "saas",
+        "launch",
+        "promotion",
+        "plan"
       ]
     },
     {
-      "name": "locul-presentations",
-      "source": "./plugins/presentations",
-      "description": "The deck already exists. These are for deciding whether it says one thing per slide, whether the chart is honest, and whether it survives being read rather than presented. 9 skills. None measured yet, and each skill says so.",
+      "name": "locul-linkedin",
+      "source": "./plugins/linkedin",
+      "description": "Posts, profiles, comments, carousels and outreach, written against character limits and truncation points rather than against advice. 5 skills. None measured yet, and each skill says so.",
       "version": "1.0.0",
       "author": {
         "name": "Locul",
         "url": "https://locul.ai"
       },
-      "homepage": "https://locul.ai/skills/presentations/",
+      "homepage": "https://locul.ai/skills/linkedin/",
       "license": "MIT",
-      "category": "presentations",
+      "category": "linkedin",
       "keywords": [
-        "presentations",
-        "chart",
-        "honesty",
-        "data",
-        "story",
-        "build",
-        "decision",
-        "memo",
-        "deck",
-        "accessibility",
-        "generation",
-        "constraints"
+        "linkedin",
+        "carousel",
+        "builder",
+        "comment",
+        "writer",
+        "sequence",
+        "founder",
+        "profile",
+        "rewriter",
+        "post",
+        "generator"
       ]
     },
     {
-      "name": "locul-product-management",
-      "source": "./plugins/product-management",
-      "description": "Six skills that produce the specification, the tickets, the blueprint and the decision. Each carries an ordering, a gate or a template where getting the sequence wrong is the expensive part. 6 skills. None measured yet, and each skill says so.",
+      "name": "locul-paid-ads",
+      "source": "./plugins/paid-ads",
+      "description": "Campaign work where the hard part is not the copy. It is the floors that decide whether a result means anything, the published caps and match rules nothing in the interface enforces for you, and the difference between a documented number and a repeated one. 6 skills. None measured yet, and each skill says so.",
       "version": "1.0.0",
       "author": {
         "name": "Locul",
         "url": "https://locul.ai"
       },
-      "homepage": "https://locul.ai/skills/product-management/",
+      "homepage": "https://locul.ai/skills/paid-ads/",
       "license": "MIT",
-      "category": "product-management",
+      "category": "paid-ads",
       "keywords": [
-        "product management",
-        "activation",
-        "first",
-        "design",
-        "expert",
-        "council",
-        "debate",
-        "persona",
-        "build",
-        "recurring",
-        "runbook",
-        "spec"
-      ]
-    },
-    {
-      "name": "locul-research",
-      "source": "./plugins/research",
-      "description": "Where a number came from, whether the source is what it appears to be, and the named biases that make a confident analysis wrong. 7 skills. None measured yet, and each skill says so.",
-      "version": "1.0.0",
-      "author": {
-        "name": "Locul",
-        "url": "https://locul.ai"
-      },
-      "homepage": "https://locul.ai/skills/research/",
-      "license": "MIT",
-      "category": "research",
-      "keywords": [
-        "research",
-        "analysis",
-        "sanity",
-        "check",
-        "claim",
-        "provenance",
-        "trace",
-        "competitive",
-        "teardown",
-        "evidence",
-        "synthesis",
-        "build"
+        "paid ads",
+        "landing",
+        "page",
+        "message",
+        "match",
+        "rewriter",
+        "facebook",
+        "writer",
+        "google",
+        "negative",
+        "keyword",
+        "list"
       ]
     },
     {
       "name": "locul-resume",
       "source": "./plugins/resume",
-      "description": "Six skills for the documents and conversations that decide a hiring outcome, plus one we wrote for this page, measured, and deleted. 6 skills. None measured yet, and each skill says so.",
+      "description": "Applications, interviews and offers, built on what applicant tracking vendors and employment regulators actually publish, which contradicts most of the advice in circulation. 5 skills. None measured yet, and each skill says so.",
       "version": "1.0.0",
       "author": {
         "name": "Locul",
@@ -292,50 +101,23 @@
       "category": "resume",
       "keywords": [
         "resume",
+        "tailorer",
+        "recruiter",
+        "outreach",
+        "writer",
+        "role",
+        "matched",
         "cover",
         "letter",
-        "build",
-        "interview",
-        "story",
-        "bank",
-        "offer",
+        "salary",
         "negotiation",
-        "brief",
-        "promotion",
-        "case"
-      ]
-    },
-    {
-      "name": "locul-security",
-      "source": "./plugins/security",
-      "description": "Six skills for the design and decision work: what can go wrong and where, which of nine hundred findings matter, what to do in the first hour of a leak, and how to defend an agent that reads untrusted text. 6 skills. None measured yet, and each skill says so.",
-      "version": "1.0.0",
-      "author": {
-        "name": "Locul",
-        "url": "https://locul.ai"
-      },
-      "homepage": "https://locul.ai/skills/security/",
-      "license": "MIT",
-      "category": "security",
-      "keywords": [
-        "security",
-        "authorisation",
-        "model",
-        "build",
-        "dependency",
-        "risk",
-        "triage",
-        "prompt",
-        "injection",
-        "defence",
-        "secret",
-        "exposure"
+        "script"
       ]
     },
     {
       "name": "locul-seo",
       "source": "./plugins/seo",
-      "description": "Search work with a checkable core: what a results page is actually made of, which of your own pages are competing with each other, and why the traffic went away. 11 skills. 1 of 11 measured against a control.",
+      "description": "Search work built from primary sources: what the engines actually document, what they explicitly tell you to ignore, and the numbers everyone publishes that have no source at all. 5 skills. None measured yet, and each skill says so.",
       "version": "1.0.0",
       "author": {
         "name": "Locul",
@@ -346,44 +128,17 @@
       "category": "seo",
       "keywords": [
         "seo",
-        "search",
-        "visibility",
-        "content",
-        "cannibalisation",
-        "crawl",
-        "control",
-        "free",
-        "tool",
-        "play",
         "internal",
-        "link"
-      ]
-    },
-    {
-      "name": "locul-writing",
-      "source": "./plugins/writing",
-      "description": "Editing as an ordered set of passes, documentation as a typed artefact, and the two headline tests that replace taste with something falsifiable. 8 skills. None measured yet, and each skill says so.",
-      "version": "1.0.0",
-      "author": {
-        "name": "Locul",
-        "url": "https://locul.ai"
-      },
-      "homepage": "https://locul.ai/skills/writing/",
-      "license": "MIT",
-      "category": "writing",
-      "keywords": [
-        "writing",
+        "link",
+        "builder",
+        "keyword",
+        "cluster",
+        "serp",
+        "first",
         "article",
-        "body",
-        "spec",
-        "visual",
-        "documentation",
-        "architecture",
-        "error",
-        "message",
-        "headline",
+        "writer",
         "title",
-        "test"
+        "meta"
       ]
     }
   ]
